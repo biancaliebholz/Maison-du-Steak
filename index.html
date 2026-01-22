@@ -7,35 +7,37 @@
     <link rel="stylesheet" href="./global-styles.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/hero.css">
+    <link rel="stylesheet" href="./styles/menu.css">
 </head>
 <body>
 
+<header class="main-header">
+  <nav class="nav">
+    <div class="nav-inner">
+      <img class="nav-logo" src="./assets/png/ms-logo.png" alt="maison-du-steak-logo">
 
-    <header class="main-header">
-      <nav class="nav"></nav>
-        <div class="nav-wrapper">
-         <img class="nav-logo" src="./assets/png/ms-logo.png" alt="maison-du-steak-logo">
+      <ul id="navLinks" class="nav-links">
+        <li><a href="#steaks">Steaks</a></li>
+        <li><a href="#salades">Salades</a></li>
+        <li><a href="#accompagnements">Accompagnements</a></li>
+        <li><a href="#sauces">Sauces</a></li>
+        <li><a href="#boissons">Boissons</a></li>
+      </ul>
 
-            <button id="navToggle"
-               class="nav-toggle"
-               type="button"
-               aria-controls="navLinks"
-               aria-expanded="false">
-               ☰
-              </button>
+      <div class="nav-right">
+      <img class="shopping-card-logo" src="./assets/png/shopping-card-logo.PNG" alt="Einkaufswagen-Logo">
+    <button id="navToggle"
+        class="nav-toggle"
+        type="button"
+        aria-controls="navLinks"
+        aria-expanded="false">
+        ☰
+      </button>
+    </div>
+    </div>
 
-            <ul id="navLinks" class="nav-links">
-              <li><a href="">Steaks</a></li>li>
-              <li><a href="">Salades</a></li>li>
-              <li><a href="">Accompagnment</a></li>li>
-              <li><a href="">Sauces</a></li>li>
-              <li><a href="">Boissons</a></li>li>
-              </ul>
-
-            <img class="shopping-card-logo" src="./assets/png/shopping-card-logo.PNG" alt="Einkauswagen-Logo">
-            </div>
-       </nav>
- </header>
+  </nav>
+</header>
     
 
  <section class="hero">
@@ -44,11 +46,13 @@
   <div class="hero-content">
     <h1>Maison du Steak</h1>
     <p>French inspired Steakhouse Delivery</p>
-    <a class="cta" href="#">Jetzt entdecken</a>
   </div>
+  <img class="round-logo" src="./assets/png/ms-logo.png" alt="ms-logo">
 </section>
 
-
+<section class="menu">
+    <img class="background" src="./assets/pictures/bg.PNG" alt="background-image">
+</section>
 
 
 <footer class="main-footer">
