@@ -1,0 +1,49 @@
+.main-header{
+  background: var(--primary);
+    padding: 20px 30px;
+    border-bottom: solid 1px var(--light);
+}
+
+.nav-logo{
+
+height: 80px;
+width: auto;
+}
+
+
+.nav-links{
+    display: flex;
+    
+}
+
+.nav-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shopping-card-logo{
+    height: 34px;
+    width: auto;
+
+}
+
+
+li a{
+    color: var(--light);
+    font-size: 22px;
+    font-family: "Libre_Baskerville";
+}
+
+ul{
+    gap: 8px;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--light);
+  cursor: pointer;
+}
