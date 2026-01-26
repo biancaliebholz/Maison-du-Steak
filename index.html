@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/hero.css">
     <link rel="stylesheet" href="./styles/menu.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/shopping-cart.css">
 </head>
-<body>
+<body onload="renderMenu()">
 
 <header class="main-header">
   <nav class="nav">
@@ -18,10 +20,10 @@
 
       <ul id="navLinks" class="nav-links">
         <li><a href="#steaks">Steaks</a></li>
-        <li><a href="#salades">Salades</a></li>
-        <li><a href="#accompagnements">Accompagnements</a></li>
+        <li><a href="#salate">Salades</a></li>
+        <li><a href="#beilagen">Accompagnements</a></li>
         <li><a href="#sauces">Sauces</a></li>
-        <li><a href="#boissons">Boissons</a></li>
+        <li><a href="#getränke">Boissons</a></li>
       </ul>
 
       <div class="nav-right">
@@ -50,17 +52,37 @@
   <img class="round-logo" src="./assets/png/ms-logo.png" alt="ms-logo">
 </section>
 
-<section class="menu">
-    <img class="background" src="./assets/pictures/bg.PNG" alt="background-image">
-</section>
+<main class="menu-wrapper" id="menu">
+  <section id="menu_card" class="menu_card"></section>
+
+  <aside class="cart" id="cart">
+  <h2 class="cart-title">Warenkorb</h2>
+
+  <div class="cart-items" id="cart_items">
+  </div>
+
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Summe</span>
+      <strong id="cart_total">0,00 €</strong>
+    </div>
+
+    <button class="cart-checkout" type="button">
+      Checkout
+    </button>
+  </div>
+</aside>
+
+</main>
 
 
 <footer class="main-footer">
   <div class="footer-content">
-    <p>© 2026 BookHive — Dein Bienenstock für Bücher</p>
+    <p>© 2026 Maison-Du-Steak</p>
   </div>
 </footer>
 
     <script src="./script.js"></script>
+    <script src="./js/burger-menu.js"></script>
 </body>
 </html>

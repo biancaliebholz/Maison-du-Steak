@@ -32,7 +32,7 @@
   background: linear-gradient(90deg, var(--light), var(--secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 28px;
+  font-size: 24px;
   font-family: "Libre_Baskerville", serif;
 }
 
@@ -67,8 +67,8 @@
   height: 1px;
   background: linear-gradient(
     90deg,
-    #f3e6b1,
-    #f3e6b1
+    var(--light),
+    var(--secondary)
   );
 
   opacity: 0;

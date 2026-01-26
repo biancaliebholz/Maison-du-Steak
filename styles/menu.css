@@ -1,4 +1,148 @@
-.background{
+
+
+.menu-wrapper{
+  background-image: url("../assets/pictures/bg.PNG");
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-position: top center;
+  margin: 0;
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  justify-content: center;
+
+  padding: 30px 20px;
+}
+
+.menu_card{
+  width: 65%;
+  padding: 30px 50px;
+  background: transparent;
+  border-radius: 8px;
+  margin-inline: 0;
+}
+
+.menu-category{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.menu-category h2{
+  margin-top: 64px;
+  font-size: 44px;
+  text-align: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--golden);
+}
+
+.menu-items{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.menu-item{
+  background: var(--primary);
+  border: 1px solid var(--gray);
+  border-radius: 16px;
+  padding: 22px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+ 
+}
+
+
+.menu-item-header{
+  margin-block: 22px;
+  padding-bottom: 12px;
+  border-bottom: solid 1px var(--golden);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-item-title{
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.menu-item-price{
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--golden);
+}
+
+.menu-item p{
+  font-size: 18px;
+}
+
+.menu-add{
+  margin-top: 10px;
+  padding: 10px 22px;
+  font-size: 18px;
+   background: linear-gradient(90deg, var(--golden), var(--yellow));
+  border: none;
+  border-radius: 8px;
+  width: 160px;
+  color: var(--primary);
+  font-weight: 700;
+  align-self: flex-end;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.menu-add:hover{
+  filter:brightness(1.2);
+}
+
+@media (max-width: 900px){
+  .menu-wrapper{
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px 14px;
+  }
+
+  .menu_card{
     width: 100%;
-   
+    padding: 18px 14px;
+  }
+}
+
+@media (max-width: 600px){
+  .menu-category{
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .menu-category h2{
+    font-size: 22px;
+    padding-bottom: 10px;
+  }
+
+  .menu-item{
+    padding: 14px;
+    border-radius: 14px;
+    gap: 8px;
+  }
+
+  .menu-item-title{
+    font-size: 16px;
+  }
+
+  .menu-item-price{
+    font-size: 16px;
+  }
+
+  .menu-item-desc{
+    font-size: 13px;
+  }
+
+  .menu-add{
+    width: 100%;
+    text-align: center;
+  }
 }

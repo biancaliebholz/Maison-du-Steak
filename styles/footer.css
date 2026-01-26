@@ -1,0 +1,16 @@
+.main-footer{
+background: var(--primary);
+border-top: solid 1px var(--golden);
+
+}
+
+.footer-content{
+    text-align: center;
+    padding-block: 64px;
+    
+}
+.footer-content p{
+color: var(--golden);
+font-family: "Libre_Baskerville";
+font-size: 22px;
+}

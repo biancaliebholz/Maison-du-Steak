@@ -9,11 +9,12 @@
 
 :root {
   --primary: #0e0d0e;
-  --secondary: #fdd08b;
-  --dark: #0F172A;
+  --secondary: #d4a154;
   --light: #fadbbd;
-  --gray: #2A2F3A;
+  --gray: #222324e8;
   --white:#ffffffe6;
+  --golden:  #b3986f;
+  --yellow:#ce800b;
 }
 @font-face {
   font-family: "Libre_Baskerville";
@@ -29,12 +30,27 @@ h1, h2{
   background: linear-gradient(120deg, var(--gray), var(--secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+    font-family: "Libre_Baskerville";
 }
 
 p{
-  color: var(--white)
+  color: var(--white);
+  font-family: "Libre_Baskerville";
+
 }
 
-body{
-  background-color: var(--primary);
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+h3{
+  color: var(--light);
+    font-family: "Libre_Baskerville";
+}
+
+strong{
+  color: var(--white);
+    font-family: "Libre_Baskerville";
 }
