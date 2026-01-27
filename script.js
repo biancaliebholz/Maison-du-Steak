@@ -217,7 +217,6 @@ const menu = [
 function renderMenu() {
   const menuCard = document.getElementById("menu_card");
   menuCard.innerHTML = "";
-
   const categories = getCategories();
 
   for (let i = 0; i < categories.length; i++) {
@@ -341,8 +340,9 @@ function addToCart(menuIndex) {
 function renderCart() {
   const cartItemsEl = document.getElementById("cart_items");
   const totalEl = document.getElementById("cart_total");
+  const totalHandleEl = document.getElementById("cart_total_handle");
 
-  if (!cartItemsEl || !totalEl) return;
+
 
   cartItemsEl.innerHTML = "";
 
@@ -352,7 +352,7 @@ function renderCart() {
     const cartItem = cart[i];
     const menuItem = menu[cartItem.menuIndex];
 
-    total = total + (menuItem.price * cartItem.qty);
+    total += menuItem.price * cartItem.qty;
 
     cartItemsEl.innerHTML += `
       <div class="cart-item">
@@ -369,31 +369,20 @@ function renderCart() {
           oninput="updateCartNote(${i}, this.value)"
         >${cartItem.note}</textarea>
 
-     <div class="cart-actions">
-
-  <button 
-    class="cart-btn cart-btn-minus" 
-    type="button" 
-    onclick="decreaseQty(${i})"
-  >−</button>
-
-  <button 
-    class="cart-btn cart-btn-plus" 
-    type="button" 
-    onclick="increaseQty(${i})"
-  >+</button>
-
-  <button 
-    class="cart-btn cart-btn-remove" 
-    type="button" 
-    onclick="removeFromCart(${i})"
-  >Entfernen</button>
-
-</div>
+        <div class="cart-actions">
+          <button class="cart-btn cart-btn-minus" type="button" onclick="decreaseQty(${i})">−</button>
+          <button class="cart-btn cart-btn-plus" type="button" onclick="increaseQty(${i})">+</button>
+          <button class="cart-btn cart-btn-remove" type="button" onclick="removeFromCart(${i})">Entfernen</button>
+        </div>
+      </div>
     `;
   }
 
   totalEl.textContent = total.toFixed(2) + " €";
+
+  if (totalHandleEl) {
+    totalHandleEl.textContent = total.toFixed(2) + " €";
+  }
 }
 
 function updateCartNote(cartIndex, value) {
@@ -423,3 +412,15 @@ function removeFromCart(cartIndex) {
 
 
 
+function toggleCart() {
+  const cart = document.getElementById("cart");
+  if (!cart) return;
+
+  if (cart.classList.contains("is-open")) {
+    cart.classList.remove("is-open");
+  } else {
+    cart.classList.add("is-open");
+  }
+}
+
+renderCart();

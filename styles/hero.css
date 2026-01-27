@@ -1,69 +1,60 @@
-
 .hero-img {
   width: 100%;
   height: auto;
   display: block;
-  
 }
 
-.hero{
+.hero {
   position: relative;
   margin: 0;
-
 }
-.hero-content{
+
+.hero-content {
   position: absolute;
-  top:150px;
+  top: 150px;
+  left: 0;
+  right: 0;
   width: 100%;
   text-align: center;
   font-family: "Libre_Baskerville";
+  padding-inline: 16px;
 }
 
-.hero-content h1{
+.hero-content h1 {
   font-size: 64px;
   margin-bottom: 22px;
 }
 
-.hero-content p{
+.hero-content p {
   font-size: 28px;
 }
 
-.round-logo{
+.round-logo {
   position: absolute;
   height: 90px;
   width: auto;
   bottom: 0;
-  left:50%;
+  left: 50%;
   transform: translate(-50%, 50%);
   z-index: 2;
 }
 
-@media (max-width:1200px) {
-  .hero-content{
-    top:120px
-  }
-  .hero-content h1{
-  font-size: 56px;
-  margin-bottom: 18px;
-}
-.hero-content p{
-  font-size: 24px;
+/* ===== Tablet ===== */
+@media (max-width: 1200px) {
+  .hero-content { top: 120px; }
+  .hero-content h1 { font-size: 56px; margin-bottom: 18px; }
+  .hero-content p { font-size: 24px; }
 }
 
-}
-@media (max-width:960px) {
-  .hero-content{
-    top:80px
-  }
-  .hero-content h1{
-  font-size: 48px;
-  margin-bottom: 14px;
-}
-.hero-content p{
-  font-size: 22px;
-}
-.round-logo{
-  height: 70px;
+/* ===== Mobile ===== */
+@media (max-width: 960px) {
 
-}
+  /* Hero Text komplett ausblenden */
+  .hero-content {
+    display: none;
+  }
+
+  .round-logo {
+    height: 60px;
+  }
 }

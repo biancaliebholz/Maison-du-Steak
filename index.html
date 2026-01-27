@@ -1,88 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maison du Steak</title>
-    <link rel="stylesheet" href="./global-styles.css">
-    <link rel="stylesheet" href="./styles/header.css">
-    <link rel="stylesheet" href="./styles/hero.css">
-    <link rel="stylesheet" href="./styles/menu.css">
-    <link rel="stylesheet" href="./styles/footer.css">
-    <link rel="stylesheet" href="./styles/shopping-cart.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maison du Steak</title>
+
+  <link rel="stylesheet" href="./global-styles.css" />
+  <link rel="stylesheet" href="./styles/header.css" />
+  <link rel="stylesheet" href="./styles/hero.css" />
+  <link rel="stylesheet" href="./styles/menu.css" />
+  <link rel="stylesheet" href="./styles/footer.css" />
+  <link rel="stylesheet" href="./styles/shopping-cart.css" />
 </head>
+
 <body onload="renderMenu()">
 
-<header class="main-header">
-  <nav class="nav">
-    <div class="nav-inner">
-      <img class="nav-logo" src="./assets/png/ms-logo.png" alt="maison-du-steak-logo">
+  <header class="main-header">
+    <nav class="nav">
+      <div class="nav-inner">
 
-      <ul id="navLinks" class="nav-links">
-        <li><a href="#steaks">Steaks</a></li>
-        <li><a href="#salate">Salades</a></li>
-        <li><a href="#beilagen">Accompagnements</a></li>
-        <li><a href="#sauces">Sauces</a></li>
-        <li><a href="#getränke">Boissons</a></li>
-      </ul>
+        <div class="nav-center">
+          <img class="nav-logo" src="./assets/png/ms-logo.png" alt="maison-du-steak-logo" />
+          <h1 class="nav-title">Maison du Steak</h1>
+        </div>
 
-      <div class="nav-right">
-      <img class="shopping-card-logo" src="./assets/png/shopping-card-logo.PNG" alt="Einkaufswagen-Logo">
-    <button id="navToggle"
-        class="nav-toggle"
-        type="button"
-        aria-controls="navLinks"
-        aria-expanded="false">
-        ☰
-      </button>
-    </div>
-    </div>
+        <ul id="navLinks" class="nav-links">
+          <li><a href="#steaks">Steaks</a></li>
+          <li><a href="#salate">Salades</a></li>
+          <li><a href="#beilagen">Accompagnements</a></li>
+          <li><a href="#sauces">Sauces</a></li>
+          <li><a href="#getränke">Boissons</a></li>
+        </ul>
 
-  </nav>
-</header>
-    
+        <div class="nav-right">
+          <button
+            id="navToggle"
+            class="nav-toggle"
+            type="button"
+            aria-controls="navLinks"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+        </div>
 
- <section class="hero">
-  <img class="hero-img" src="./assets/pictures/hero.PNG" alt="" aria-hidden="true">
+      </div>
+    </nav>
+  </header>
 
-  <div class="hero-content">
-    <h1>Maison du Steak</h1>
-    <p>French inspired Steakhouse Delivery</p>
-  </div>
-  <img class="round-logo" src="./assets/png/ms-logo.png" alt="ms-logo">
-</section>
+  <section class="hero">
+    <img class="hero-img" src="./assets/pictures/hero.PNG" alt="" aria-hidden="true" />
 
-<main class="menu-wrapper" id="menu">
-  <section id="menu_card" class="menu_card"></section>
-
-  <aside class="cart" id="cart">
-  <h2 class="cart-title">Warenkorb</h2>
-
-  <div class="cart-items" id="cart_items">
-  </div>
-
-  <div class="cart-footer">
-    <div class="cart-total">
-      <span>Summe</span>
-      <strong id="cart_total">0,00 €</strong>
+    <div class="hero-content">
+      <h1>Maison du Steak</h1>
+      <p>French inspired Steakhouse Delivery</p>
     </div>
 
-    <button class="cart-checkout" type="button">
-      Checkout
-    </button>
-  </div>
-</aside>
+    <img class="round-logo" src="./assets/png/ms-logo.png" alt="ms-logo" />
+  </section>
 
-</main>
+  <main class="menu-wrapper" id="menu">
+    <section id="menu_card" class="menu_card"></section>
 
+    <aside class="cart" id="cart">
 
-<footer class="main-footer">
-  <div class="footer-content">
-    <p>© 2026 Maison-Du-Steak</p>
-  </div>
-</footer>
+  
+      <div class="cart-handle" onclick="toggleCart()">
 
-    <script src="./script.js"></script>
-    <script src="./js/burger-menu.js"></script>
+        <div class="cart-handle-left">
+          <button class="cart-handle-burger" type="button" aria-label="Menü">
+            ☰
+          </button>
+
+          <img
+            class="cart-handle-icon"
+            src="./assets/png/shopping-card-logo.PNG"
+            alt="Warenkorb"
+          />
+        </div>
+
+        <strong class="cart-handle-total" id="cart_total_handle">0,00 €</strong>
+      </div>
+
+      <h2 class="cart-title">Warenkorb</h2>
+
+      <div class="cart-body">
+        <div class="cart-items" id="cart_items"></div>
+
+        <div class="cart-footer">
+          <div class="cart-total">
+            <span>Summe</span>
+            <strong id="cart_total">0,00 €</strong>
+          </div>
+
+          <button class="cart-checkout" type="button" onclick="checkout()">
+            Checkout
+          </button>
+        </div>
+      </div>
+
+    </aside>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <p>© 2026 Maison-Du-Steak</p>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+  <script src="./js/burger-menu.js"></script>
 </body>
 </html>
