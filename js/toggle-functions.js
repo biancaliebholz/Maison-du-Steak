@@ -14,3 +14,16 @@ function initBurgerMenu() {
 }
 
 initBurgerMenu();
+
+
+function toggleCart() {
+  const cart = document.getElementById("cart");
+  if (!cart) return;
+
+  if (cart.classList.contains("is-open")) {
+    cart.classList.remove("is-open");
+  } else {
+    cart.classList.add("is-open");
+  }
+}
+renderCart();

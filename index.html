@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./styles/menu.css" />
   <link rel="stylesheet" href="./styles/footer.css" />
   <link rel="stylesheet" href="./styles/shopping-cart.css" />
+  <link rel="stylesheet" href="./styles/toast.css">
 </head>
 
 <body onload="renderMenu()">
@@ -60,6 +61,7 @@
   </section>
 
   <main class="menu-wrapper" id="menu">
+      <div class="menu-container">
     <section id="menu_card" class="menu_card"></section>
 
     <aside class="cart" id="cart">
@@ -100,6 +102,7 @@
       </div>
 
     </aside>
+    </div>
   </main>
 
   <footer class="main-footer">
@@ -107,8 +110,30 @@
       <p>© 2026 Maison-Du-Steak</p>
     </div>
   </footer>
-
+  <script src="./js/db.js"></script>
+  <script src="./js/template.js"></script>
+  <script src="./js/toast.js"></script>  
   <script src="./script.js"></script>
-  <script src="./js/burger-menu.js"></script>
+  <script src="./js/toggle-functions.js"></script>
+  
+
+<div id="toast" class="toast">
+  <div class="toast-inner">
+
+    <div class="toast-steam" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="toast-text">
+      <strong>Deine Bestellung wird zubereitet</strong>
+      <p>…und ist in Kürze bei dir.</p>
+    </div>
+
+    <button class="toast-close" type="button" onclick="hideToast()">×</button>
+
+  </div>
+</div>
 </body>
 </html>
