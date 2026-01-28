@@ -13,7 +13,7 @@ function categoryEndTemplate() {
   `;
 }
 
-//BEDINGUNG ? WENN_TRUE : WENN_FALSE !!! IF/ELSE KURZSCHREIBWIESE !!!
+//IF/ELSE KURZSCHREIBWIESE !!!BEDINGUNG ? WENN_TRUE : WENN_FALSE !!! 
 function menuItemTemplate(item, index) {
   const weightHtml = item.weight_g ? `<p>${item.weight_g} g</p>` : "";
   const volumeHtml = item.volume_l ? `<p>${item.volume_l} l</p>` : "";
